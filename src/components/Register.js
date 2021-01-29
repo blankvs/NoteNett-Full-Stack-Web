@@ -23,14 +23,14 @@ class Register extends Component {
         axios.post('/auth/register', this.state).then((res) => {
             console.log(res.data)
             this.props.loginUser(res.data)
-            this.props.history.push("/Notes")
+            this.props.history.push("/App")
         }).catch(() => alert("Register failed"))
     }
 
     render() {
         
         if (this.props.isLoggedIn) {
-            return <Redirect to="/Notes" />
+            return <Redirect to="/App" />
         }
 
         return (

@@ -4,6 +4,7 @@ import routes from './routes'
 import { connect } from 'react-redux'
 import Header from './components/Header'
 import loginUser from './Redux/userReducer'
+import Form from './components/Form'
 
 function App(props) {
   return (
@@ -20,7 +21,7 @@ function App(props) {
 }
 
 const mapStateToProps = (reduxState) => {
-  return {reduxState}
+  return reduxState
 }
 
 export default connect(mapStateToProps, {loginUser})(App);
