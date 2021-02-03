@@ -4,6 +4,7 @@ import { login, loginUser } from '../Redux/userReducer'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router-dom'
+import '../Scss/HeaderStyle.scss'
 
 class Header extends Component {
 

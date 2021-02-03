@@ -8,3 +8,10 @@ CREATE TABLE users_auth (
     user_id INT UNIQUE REFERENCES users(id),
     password TEXT
 );
+
+CREATE TABLE todos (
+    id serial PRIMARY KEY,
+    user_id INT REFERENCES users(id),
+    text VARCHAR(200),
+    completed BOOLEAN
+);

@@ -11,11 +11,11 @@ function App(props) {
     <div className="App">
       <Header/>
       { routes }
-      <div className="UserIn">
+      {/* <div className="UserIn">
         {
           props.isLoggedIn?`LOGGED AS ${props.user.email}`: null
         }
-      </div>
+      </div> */}
     </div>
   );
 }

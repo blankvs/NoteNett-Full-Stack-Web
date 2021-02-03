@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.landSlogan {
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 265px;
+    letter-spacing: 6px;
+}
+
+.redLogin {
+    border-radius: 50px 50px;
+    border: none;
+    background-color: white;
+    height: 40px;
+    width: 180px;
+    outline: none;
+    margin: auto;
+    text-decoration: none;
+    color: black;
+}
+
+.redRegister {
+    border-radius: 50px 50px;
+    border: none;
+    background-color: white;
+    height: 40px;
+    width: 180px;
+    outline: none;
+    margin: auto;
+    text-decoration: none;
+    color: black;
+}
+
+.redLogOutline {
+    height: 50px;
+    width: 190px;
+    border: 3px white solid;
+    border-radius: 50px 50px;
+    padding-top: 2px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.redRegOutline {
+    height: 50px;
+    width: 190px;
+    border: 3px white solid;
+    border-radius: 50px 50px;
+    padding-top: 2px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.OrganizerLand {
+    height: 300px;
+    width: 500px;
+    border: transparent solid 1px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media(max-width: 660px) {
+    .OrganizerLand {
+        // padding-left: ;
+    }
+    .redLogin {
+        height: 40px;
+        width: 180px;
+    }
+    .redLogOutline {
+        height: 50px;
+        width: 190px;
+        margin-bottom: 15px;
+    }
+    .OrganizerLand {
+        display: inline-block;
+        width: 200px;
+    }
+}
+

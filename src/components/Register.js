@@ -28,24 +28,28 @@ class Register extends Component {
     }
 
     render() {
-        
+
         if (this.props.isLoggedIn) {
             return <Redirect to="/App" />
         }
 
         return (
             <div>
-                <div className="userForm">
-                    <h1 className="textEmail">EMAIL</h1>
-                    <input className="inputEmail" value={this.state.email} name="email" type="text" onChange={(e) => this.onType(e)} />
-                    <h1 className="textPass">PASSWORD</h1>
-                    <input className="inputPass" value={this.state.password} name="password" type="text" onChange={(e) => this.onType(e)} />
-                    <ul>
-                        <li><Link className="registerSwitch" to="/Login">LOGIN?</Link></li>
-                    </ul>
-                </div>
                 <div>
-                    <button className="loginButton" onClick={() => this.handleRegister()}>SIGN UP</button>
+                    <div className="loginInputs">
+                        <div className="BoxOutline">
+                            <h1 className="h1Email">EMAIL</h1>
+                            <input className="emailInput" value={this.state.email} name="email" type="text" onChange={(e) => this.onType(e)} />
+                            <h1 className="h1Password">PASSWORD</h1>
+                            <input className="passwordInput" value={this.state.password} name="password" type="text" onChange={(e) => this.onType(e)} />
+                            <ul>
+                                <li><Link className="registerSwitch" to="/Login">LOGIN?</Link></li>
+                            </ul>
+                        </div>
+                        <div className="inputOutline">
+                            <button className="loginButton" onClick={() => this.handleRegister()}>REGISTER</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

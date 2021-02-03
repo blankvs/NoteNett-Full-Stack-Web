@@ -1,28 +1,24 @@
-import React, { Component } from 'react'
 import axios from 'axios'
 import { connect } from 'react-redux'
 import { loginUser } from '../Redux/userReducer'
 import { Link, Redirect } from "react-router-dom"
+import '../Scss/LandingStyle.scss'
 
-class Landing extends Component {
-    constructor() {
-        super()
-        this.state = {
-            
-        }
-    }
+function Landing() {
 
-    render() {
-        return(
-            <div>
-                <div className="landSlogan"><h1>NOTES IN THE BEST WAY YOU "NOTE" HOW</h1></div>
-                <div className="redLogReg">
-                    <Link className="redLogin" to="/Login">LOGIN</Link>
-                    <Link className="redRegister" to="/Register">REGISTER</Link>
+    return (
+        <div>
+            <h1 className="landSlogan">NOTES IN THE BEST WAY YOU "NOTE" HOW</h1>
+                <div className="OrganizerLand">
+                    <div className="redLogOutline">
+                        <button className="redLogin"><Link className="redLogin" to="/Login">LOGIN</Link></button>
+                    </div>
+                    <div className="redRegOutline">
+                        <button className="redRegister"><Link className="redRegister" to="/Register">REGISTER</Link></button>
+                    </div>
                 </div>
-            </div>
-        )
-    }
+        </div>
+    )
 }
 
 export default Landing; 

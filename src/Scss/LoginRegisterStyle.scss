@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.BoxOutline {
+    height: 600px;
+    width: 700px;
+    border: white 2px solid;
+    margin-left: auto;
+    margin: auto;
+    padding-top: 50px;
+    margin-bottom: 28px;
+}
+
+.h1Email {
+    color: white;
+    font-weight: 400;
+    letter-spacing: 10px;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.h1Password {
+    color: white;
+    font-weight: 400;
+    letter-spacing: 10px;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.emailInput {
+    width: 540px;
+    height: 35px;
+    border: rgb(0, 0, 0) 20px;
+    border-left: 5px white;
+    margin-bottom: 80px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: white 1px solid;
+    outline: none;
+    text-align: center;
+}
+
+.passwordInput {
+    width: 540px;
+    height: 35px;
+    border: rgb(0, 0, 0) 20px;
+    border-left: 5px white;
+    margin-bottom: 170px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: white 1px solid;
+    outline: none;
+    text-align: center;
+}
+
+.registerSwitch {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-left: 0px;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.loginButton {
+    border-radius: 50px 50px;
+    border: none;
+    background-color: white;
+    height: 40px;
+    width: 180px;
+    outline: none;
+    margin: auto;
+}
+
+.inputOutline {
+    height: 50px;
+    width: 190px;
+    border: 3px white solid;
+    border-radius: 50px 50px;
+    padding-top: 2px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.emailInput[type=text] {
+    color: #00FF00;
+}
+
+.passwordInput[type=text] {
+    color: #00FF00;
+}
+
+@media(max-width: 660px) {
+
+}

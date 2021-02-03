@@ -2,6 +2,7 @@
 
 const initialState = {
     user: {},
+    // todos: [],
     isLoggedIn: false
 }
 

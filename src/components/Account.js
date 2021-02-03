@@ -6,10 +6,10 @@ import { Link, Redirect } from "react-router-dom"
 import { withRouter } from 'react-router-dom'
 
 class Account extends Component {
-    
+
     componentDidMount() {
-        axios.get('/auth').then( res => {
-            if (res.data.id){
+        axios.get('/auth').then(res => {
+            if (res.data.id) {
                 this.props.loginUser(res.data)
             }
         })
@@ -21,11 +21,13 @@ class Account extends Component {
             this.props.history.push('/')
         })
     }
-    
+
     render() {
-        return(
+        return (
             <div>
-                <button className="buttonLogout" onClick={this.logoutUser}>LOGOUT</button>
+                <div className="inputOutline">
+                    <button className="loginButton" onClick={this.logoutUser}>LOGOUT</button>
+                </div>
             </div>
         )
     }
