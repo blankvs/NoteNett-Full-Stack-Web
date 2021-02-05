@@ -13,13 +13,15 @@
     background-color: transparent;
     border: 0px;
     border-left: white 8.5px solid;
-    padding-left: 10px;
+    padding-left: 23px;
     outline: none;
-    height: 40px;
+    height: 50px;
 }
 
 .todo-input[type=text] {
     color: #00FF00;
+    font-size: 15px;
+    letter-spacing: 0.5px;
 }
 
 .todo-input::placeholder {
@@ -30,32 +32,42 @@
 .todo-button {
     border-radius: 50px 50px;
     border: none;
-    width: 100px;
     background-color: white;
-    height: 30px;
-    width: 100px;
+    height: 40px;
+    width: 180px;
     outline: none;
+    // transition: background-color 0.5s ease;
 }
 
 .todo-button-outline {
-    height: 40px;
-    width: 110px;
-    border: 2px white solid;
+    height: 50px;
+    width: 190px;
+    border: 3px white solid;
     border-radius: 50px 50px;
-    padding-top: 3px;
+    padding-top: 2px;
+    margin-top: 10px;
 }
+
+// .todo-button:hover {
+//     background-color: black;
+//     color: white;
+// }
 
 .todo-item {
     color: #00FF00;
     height: 50px;
-    width: 400px;
-    border: 1px white solid;
+    width: 750px;
+    border-left: 1px white solid;
+    border-right: 1px white solid;
+    border-bottom: 1px white solid;
+    border-top: 1px white solid;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    padding-left: 10px;
+    padding-left: 25px;
     padding-top: 5px;
     overflow: scroll;
+    margin-bottom: 25px;
 }
 
 .form-wrapper {
@@ -69,8 +81,14 @@
     color: black;
     text-decoration: none;
     font-weight: 100;
-    letter-spacing: 1px;
+    letter-spacing: 4px;
+    // transition: color white 0.5ease;
+    
 }
+
+// .fa-plus-square:hover {
+//     color: white;
+// }
 
 h2 {
     color: white;
@@ -83,7 +101,8 @@ h2 {
     height: 40px;
     width: 65px;
     border: transparent 1px solid;
-    margin-left: 316px;
+    margin-left: auto;
+    margin-right: 10px;
     margin-top: -25px;
     display: flex;
     justify-content: space-between;
@@ -93,7 +112,6 @@ h2 {
 .CheckImg {
     height: 12px;
     width: 14px;
-
 }
 
 .complete-btn {
@@ -120,7 +138,6 @@ h2 {
     width: 9px;
     padding-bottom: 1px;
     outline: none;
-
 }
 
 .pin-btn {
@@ -130,7 +147,6 @@ h2 {
     cursor:pointer;
     overflow: hidden;
     outline: none;
-
 }
 
 .PinImg {
@@ -145,4 +161,35 @@ h2 {
 
 .loggedInfo {
     color: red;
+    font-weight: 400;
+    padding: 0;
+    font-size: 16px;
+    letter-spacing: 1px;
 }
+
+.loggedWrap {
+    height: 50px;
+    width: 197.5px;
+    border-right: white solid 8.5px ;
+    padding: 6px;
+    padding-left: 42px;
+}
+
+.loggedUser {
+    font-weight: 400;
+    padding: 0;
+    letter-spacing: 1px;
+}
+
+.filter-todo {
+    border: white 1.5px solid;
+    height: 35px;
+    width: 150px;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    padding: 7px;
+}
+
+
+

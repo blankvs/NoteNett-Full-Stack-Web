@@ -17,6 +17,22 @@ function Notes() {
         filterHandler();
     }, [todos, status]);
 
+    useEffect(() => {
+        getTodos()
+    }, [])
+
+    function getTodos() {
+        axios.get('/api/notes').then((res) => {
+            setTodos(res.data)
+        })
+    }
+
+    function deleteTodos() {
+        axios.delete('/api/notes').then((res) => {
+            deleteTodos(res.data)
+        })
+    }
+
     const filterHandler = () => {
         switch (status) {
             case 'completed':
@@ -38,6 +54,8 @@ function Notes() {
                     filteredTodos={filteredTodos}
                     setTodos={setTodos}
                     todos={todos}
+                    getTodos={getTodos}
+                    deleteTodos={deleteTodos}
                 />
             </div>
             <div>
@@ -47,6 +65,7 @@ function Notes() {
                     setTodos={setTodos}
                     setInputText={setInputText}
                     setStatus={setStatus}
+                    getTodos={getTodos}
                 />
             </div>
         </div>

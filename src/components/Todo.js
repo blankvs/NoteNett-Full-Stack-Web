@@ -2,23 +2,27 @@ import React from 'react'
 import CHECK from '../assets/CHECK.png'
 import X from '../assets/X.png'
 import PIN from '../assets/PIN.png'
+import axios from 'axios'
 
 
 
-const Todo = ({ text, todo, todos, setTodos }) => {
+const Todo = ({ text, todo, todos, setTodos, getTodos, deleteTodos }) => {
+    
+    
     const deleteHandler = () => {
+        axios.delete('/api/notes', { id: todo.id })
+        .then(() => {
+            deleteTodos()
+        })
         setTodos(todos.filter((el) => el.id !== todo.id))
     }
 
     const completeHandler = () => {
-        setTodos(todos.map((item) => {
-            if (item.id === todo.id) {
-                return {
-                    ...item, completed: !item.completed
-                }
-            }
-            return item;
-        }))
+        axios.put('/api/notes', { id: todo.id, completed: !todo.completed, })
+        .then(() => {
+            getTodos()
+        })
+
 }
 
     const editHandler = () => {

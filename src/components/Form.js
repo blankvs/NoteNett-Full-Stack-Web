@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import axios from 'axios'
 
-const Form = ({ setInputText, todos, setTodos, inputText, setStatus, user}) => {
+const Form = ({ setInputText, todos, setTodos, inputText, setStatus, user, getTodos }) => {
 
     
 
@@ -10,12 +10,17 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus, user}) => {
         console.log(e.target.value)
         setInputText(e.target.value)
     }
+
     const submitTodoHandler = (e) => {
         e.preventDefault()
-        setTodos([
-            ...todos, { text: inputText, completed: false, id: Math.random() * 1000 }
-        ])
-        setInputText("");
+        axios.post('/api/notes', { text: inputText, completed: false})
+        .then(() => {
+            getTodos()
+            setInputText("");
+        })
+        // setTodos([
+        //     ...todos, { text: inputText, completed: false }
+        // ])
     }
 
     const statusHandler = (e) => {
@@ -27,21 +32,21 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus, user}) => {
         <form>
             <div className="select">
                 <select onChange={statusHandler} name="todos" className="filter-todo">
-                    <option value="all">All</option>
-                    <option value="completed">Completed</option>
-                    <option value="uncompleted">Uncompleted</option>
+                    <option className="all-option" value="all">All</option>
+                    <option className="completed-option" value="completed">Completed</option>
+                    <option className="uncompleted-option" value="uncompleted">Uncompleted</option>
                 </select>
             </div>
             <div className="form-wrapper">
-                <input className="todo-input" placeholder="Type here..." value={inputText} onChange={inputTextHandler} type="text" />
+                <input className="todo-input" placeholder="TYPE HERE...." value={inputText} onChange={inputTextHandler} type="text" />
                 <div className="todo-button-outline">
                     <button className="todo-button" onClick={submitTodoHandler} type="submit" >
                         <i className="fas fa-plus-square">SUBMIT</i>
                     </button>
                 </div>
-                <div>
+                <div className="loggedWrap">
                     <h2 className="loggedInfo">LOGGED AS:</h2>
-                    <h2>{user.email}</h2>
+                    <h2 className="loggedUser">{user.email}</h2>
                 </div>
             </div>
         </form>

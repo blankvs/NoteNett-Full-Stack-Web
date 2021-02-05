@@ -14,4 +14,4 @@ CREATE TABLE todos (
     user_id INT REFERENCES users(id),
     text VARCHAR(200),
     completed BOOLEAN
-);
+); 

@@ -31,16 +31,16 @@ app.delete('/auth/logout', authCtrl.logout)
 app.get('/auth', authCtrl.getUser)
 
 //NOTE
-app.get('/api/get', noteCtrl.get)
-app.post('/api/add', noteCtrl.add)
-app.put('/api/edit', noteCtrl.edit)
-app.delete('/api/remove', noteCtrl.remove)
+app.get('/api/notes', noteCtrl.get)
+app.post('/api/notes', noteCtrl.add)
+app.put('/api/notes', noteCtrl.edit)
+app.delete('/api/notes', noteCtrl.remove)
 
 //PIN
-app.get('/api/get', pinCtrl.get)
-app.post('/api/add', pinCtrl.add)
-app.put('/api/edit', pinCtrl.edit)
-app.delete('/api/remove', pinCtrl.remove)
+// app.get('/api/get', pinCtrl.retrieve)
+// app.bannana('/api/add', pinCtrl.bannana)
+// app.adjust('/api/edit', pinCtrl.adjust)
+// app.apple('/api/remove', pinCtrl.apple)
 
 massive({
     connectionString: CONNECTION_STRING,
