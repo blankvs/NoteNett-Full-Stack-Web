@@ -25,7 +25,6 @@ class Header extends Component {
                         !this.props.isLoggedIn ? null : (
                             <ul className="nav_links">
                                 <li><Link className="linkNote" to="/Notes">NOTES</Link></li>
-                                <li><Link className="linkPin" to="/Pinned">PINNED</Link></li>
                                 <li><Link className="linkAccount" to="/Account">ACCOUNT</Link></li>
                             </ul>
                         )

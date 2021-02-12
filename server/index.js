@@ -34,7 +34,7 @@ app.get('/auth', authCtrl.getUser)
 app.get('/api/notes', noteCtrl.get)
 app.post('/api/notes', noteCtrl.add)
 app.put('/api/notes', noteCtrl.edit)
-app.delete('/api/notes', noteCtrl.remove)
+app.delete('/api/notes/delete', noteCtrl.remove)
 
 //PIN
 // app.get('/api/get', pinCtrl.retrieve)

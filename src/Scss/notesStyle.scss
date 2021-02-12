@@ -64,16 +64,22 @@
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    padding-left: 25px;
+    padding-left: 9px;
     padding-top: 5px;
     overflow: scroll;
     margin-bottom: 25px;
 }
 
+
+
 .form-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    margin-bottom: 40px;
+    position: absolute;
+    bottom: 0;
+    width: 95%;
 }
 
 .fa-plus-square {
@@ -189,7 +195,11 @@ h2 {
     color: white;
     outline: none;
     padding: 7px;
+    margin-bottom: 25px;
 }
 
-
-
+.scrollBox {
+    height: 600px;
+    width: 95vw;
+    overflow: scroll;
+}

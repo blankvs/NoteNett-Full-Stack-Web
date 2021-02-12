@@ -16,7 +16,8 @@ module.exports = {
     },
     remove: async (req, res) => {
         const db = req.app.get('db')
-        const { id } = req.session.user 
+        const { id } = req.body
+        await db.deleteTodos( id ) 
         res.status(200)   
     },
     get: async (req, res) => {

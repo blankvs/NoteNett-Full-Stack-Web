@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { connect } from 'react-redux'
-import { loginUser } from '../Redux/userReducer'
-import { Link, Redirect } from "react-router-dom"
 import Form from './Form'
 import TodoList from './TodoList'
 import '../Scss/NotesStyle.scss'
@@ -27,11 +24,11 @@ function Notes() {
         })
     }
 
-    function deleteTodos() {
-        axios.delete('/api/notes').then((res) => {
-            deleteTodos(res.data)
-        })
-    }
+    // function deleteTodos() {
+    //     axios.delete('/api/notes').then((res) => {
+    //         deleteTodos(res.data)
+    //     })
+    // }
 
     const filterHandler = () => {
         switch (status) {
@@ -47,26 +44,40 @@ function Notes() {
         }
     }
 
+    const statusHandler = (e) => {
+        setStatus(e.target.value)
+
+    }
+
     return (
         <div>
-            <div className="box">
-                <TodoList
-                    filteredTodos={filteredTodos}
-                    setTodos={setTodos}
-                    todos={todos}
-                    getTodos={getTodos}
-                    deleteTodos={deleteTodos}
-                />
-            </div>
-            <div>
-                <Form
-                    inputText={inputText}
-                    todos={todos}
-                    setTodos={setTodos}
-                    setInputText={setInputText}
-                    setStatus={setStatus}
-                    getTodos={getTodos}
-                />
+                <div className="select">
+                    <select onChange={statusHandler} name="todos" className="filter-todo">
+                        <option className="all-option" value="all">All</option>
+                        <option className="completed-option" value="completed">Completed</option>
+                        <option className="uncompleted-option" value="uncompleted">Uncompleted</option>
+                    </select>
+                </div>
+                <div className="scrollBox">
+                <div className="box">
+                    <TodoList
+                        filteredTodos={filteredTodos}
+                        setTodos={setTodos}
+                        todos={todos}
+                        getTodos={getTodos}
+                    // deleteTodos={deleteTodos}
+                    />
+                </div>
+                <div>
+                    <Form
+                        inputText={inputText}
+                        todos={todos}
+                        setTodos={setTodos}
+                        setInputText={setInputText}
+                        setStatus={setStatus}
+                        getTodos={getTodos}
+                    />
+                </div>
             </div>
         </div>
     )

@@ -12,6 +12,6 @@ CREATE TABLE users_auth (
 CREATE TABLE todos (
     id serial PRIMARY KEY,
     user_id INT REFERENCES users(id),
-    text VARCHAR(200),
+    text VARCHAR(600),
     completed BOOLEAN
 ); 
