@@ -23,12 +23,12 @@ function Notes() {
             setTodos(res.data)
         })
     }
-
-    // function deleteTodos() {
-    //     axios.delete('/api/notes').then((res) => {
-    //         deleteTodos(res.data)
-    //     })
-    // }
+    
+    function deleteTodos() {
+        axios.delete('/api/notes').catch.then((res) => {
+            deleteTodos(res.data)
+        })
+    }
 
     const filterHandler = () => {
         switch (status) {
@@ -46,8 +46,9 @@ function Notes() {
 
     const statusHandler = (e) => {
         setStatus(e.target.value)
-
     }
+
+    
 
     return (
         <div>

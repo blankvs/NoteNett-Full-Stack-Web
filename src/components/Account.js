@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import { logout, loginUser } from '../Redux/userReducer'
 import { Link, Redirect } from "react-router-dom"
 import { withRouter } from 'react-router-dom'
+import '../Scss/Account.scss'
+
 
 class Account extends Component {
 

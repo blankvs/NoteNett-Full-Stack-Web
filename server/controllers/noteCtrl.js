@@ -20,7 +20,7 @@ module.exports = {
         await db.deleteTodos( id ) 
         res.status(200)   
     },
-    get: async (req, res) => {
+    get: async (req, res) => { 
         const db = req.app.get('db')
         const { id } = req.session.user
         const notes = await db.getTodos( id )
